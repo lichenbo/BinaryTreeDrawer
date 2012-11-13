@@ -17,16 +17,15 @@
 		<script src="js/drawer.js"></script>
 	</head>
 	<body>
+		<a href="https://github.com/lichenbo"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
 		<h1>BinarytreeDrawer</h1>
 		<h2>By Chenbo.Li</h2>
 		<div>
 		<canvas id="MyCanvas" >Your browser does not support Canvas element. Please upgrade your browser asap.</canvas>
 		</div>
 		<div>
-			<form>
-				<input type="text" id="strtree" />
-				<button type="button" onclick ="buildTree(document.getElementById('strtree').value);draw();">Submit</button>
-			</form>
+				<input type="text" id="strtree"  onkeydown="if(event.keyCode==13){buildTree(document.getElementById('strtree').value);draw();}" />
+				<button type="button" onclick ="buildTree(document.getElementById('strtree').value);draw();" id="inputId">Submit</button>
 		</div>
 		<div>
 			Use `RightClick -&gt; Save as` to save the image as png format.
