@@ -3,3 +3,6 @@ Note: This is an BinaryTreeDrawer which can draw a general binarytree and save i
 This is my first runnable program with javascript. So DON'T PANIC when you notice some strange codes.
 
 I'll be glad if someone could give me advice on my program with best practice on javascript.
+
+You can have a glance at this program with the link below :
+http://binarythink.net/project/BinaryTreeDrawer/
