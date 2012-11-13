@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> BinaryTreeDrawer</title>
+		<style type="text/css">
+			body {
+			text-align:center;
+			}
+			#MyCanvas {
+				margin-left:auto;
+				margin-right:auto;
+				border-style:solid;
+			}
+		</style>
+		<script src="js/binarytree.js"></script>
+		<script src="js/canvas.js"></script>
+		<script src="js/drawer.js"></script>
+	</head>
+	<body>
+		<h1>BinarytreeDrawer</h1>
+		<h2>By Chenbo.Li</h2>
+		<div>
+		<canvas id="MyCanvas" >Your browser does not support Canvas element. Please upgrade your browser asap.</canvas>
+		</div>
+		<div>
+			<form>
+				<input type="text" id="strtree" />
+				<button type="button" onclick ="buildTree(document.getElementById('strtree').value);draw();">Submit</button>
+			</form>
+		</div>
+		<div>
+			Use `RightClick -&gt; Save as` to save the image as png format.
+		</div>
+		<p>
+		Note: Try to input an expression of a BinaryTree with the form LBTR(Li's BinaryTree Representation) which defines as follows:
+		</p>
+		<p>
+		Key ::= [^\(\)]+ <br />
+		BinaryTree ::= &lt;Key&gt;()() <br />
+		BinaryTree ::= &lt;Key&gt;(&lt;BinaryTree&gt;)() <br />
+		BinaryTree ::= &lt;Key&gt;()(&lt;BinaryTree&gt;) <br />
+		BinaryTree ::= &lt;Key&gt;(&lt;BinaryTree&gt;)(&lt;BinaryTree&gt;)
+		</p>
+		<p>
+		Try to be used to it with the following examples: <br />
+		A()()<br />
+		A(B()())()<br />
+		A()(C()())<br />
+		A(D()(E(G()())()))(HelloWorld!()())<br />
+		</p>
+	</body>
+</html>
