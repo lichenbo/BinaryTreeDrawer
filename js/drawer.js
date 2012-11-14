@@ -1,7 +1,12 @@
 function draw(){
-	document.getElementById("MyCanvas").width = Math.abs(leftmost(root,0)) + rightmost(root,0) + rightmostlabel(root).length*7 + 30;
-	document.getElementById("MyCanvas").height = 30 + 30*getlevel(root,0);
+	ocanvas = document.getElementById("MyCanvas");
+	ocanvas.width = Math.abs(leftmost(root,0)) + rightmost(root,0) + rightmostlabel(root).length*7 + 30;
+	ocanvas.height = 30 + 30*getlevel(root,0);
 	drawpoint(root,-leftmost(root,0)+15,10);
+	var oImgPNG = Canvas2Image.saveAsPNG(ocanvas,true);
+	oImgPNG.id="canvasimage";
+	oImgPNG.style.border = ocanvas.style.border;
+	ocanvas.parentNode.replaceChild(oImgPNG,ocanvas);
 }
 function leftmost(p,x) {
 	if(p.left==null) {
