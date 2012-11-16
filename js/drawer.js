@@ -1,12 +1,13 @@
 function draw(){
-	ocanvas = document.getElementById("MyCanvas");
+	
+	ocanvas = document.getElementById("MyCanvas")
 	ocanvas.width = Math.abs(leftmost(root,0)) + rightmost(root,0) + rightmostlabel(root).length*7 + 30;
 	ocanvas.height = 30 + 30*getlevel(root,0);
 	drawpoint(root,-leftmost(root,0)+15,10);
 	var oImgPNG = Canvas2Image.saveAsPNG(ocanvas,true);
 	oImgPNG.id="canvasimage";
 	oImgPNG.style.border = ocanvas.style.border;
-	ocanvas.parentNode.replaceChild(oImgPNG,ocanvas);
+	ocanvas.parentNode.replaceChild(oImgPNG,document.getElementById("canvasimage"));
 }
 function leftmost(p,x) {
 	if(p.left==null) {
